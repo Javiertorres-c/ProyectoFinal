@@ -1,14 +1,6 @@
 
-import {
-  useEffect,
-  useState
-} from "react";
-
-import {
-  useNavigate,
-  useParams
-} from "react-router-dom";
-
+import {  useEffect, useState} from "react";
+import {  useNavigate,  useParams} from "react-router-dom";
 import ProductForm from "../components/ProductForm";
 import { useProducts } from "../hooks/useProducts";
 
@@ -54,10 +46,11 @@ const ProductEditPage = () => {
 
       <h1>Editar Producto</h1>
 
-      <ProductForm
-        initialData={product}
-        onSubmit={handleUpdate}
-      />
+     <ProductForm
+       initialData={product}
+       onSubmit={handleUpdate}
+       onCancel={() => navigate("/")}
+/>
 
     </div>
   );

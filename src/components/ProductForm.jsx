@@ -3,7 +3,8 @@ import { useState } from "react";
 
 const ProductForm = ({
   initialData,
-  onSubmit
+  onSubmit,
+  onCancel
 }) => {
 
   const [formData, setFormData] = useState({
@@ -50,9 +51,13 @@ const ProductForm = ({
 
       <input type="number" name="stock" placeholder="Stock" value={formData.stock} onChange={handleChange} />
 
-      <button type="submit">
-        Guardar
-      </button>
+     <div className="form-actions">
+
+    <button type="submit" className="btn"> Guardar </button>
+
+    <button type="button" className="btn btn-ghost"  onClick={onCancel}> Cancelar </button>
+
+  </div>
 
     </form>
   );

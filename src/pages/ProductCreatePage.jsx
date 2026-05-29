@@ -21,7 +21,10 @@ const ProductCreatePage = () => {
 
       <h1>Nuevo Producto</h1>
 
-      <ProductForm onSubmit={handleCreate} />
+      <ProductForm
+       onSubmit={handleCreate}
+        onCancel={() => navigate("/")}
+/>
 
     </div>
   );
